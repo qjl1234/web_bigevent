@@ -9,22 +9,22 @@ $(function(){
             // 2 跳转到登录页面
             location.href='/login.html'
             layer.close(index)
-            console.log('23erifsifhf')
+           
         })
     })
 })
 function getuserinfo(){
-    console.log(222222)
+ 
     $.ajax({
         method:'GET',
         url:'/my/userinfo',
          success:function(res){
-             console.log(res,33333)
+           
             if(res.status!==0){
                 return layui.layer.msg('获取用户信息失败')
                 
             }
-            console.log('11111')
+           
             renderAvatar(res.data)
          },
         //  不管成更还是失败 最终都会调用complete回调函数
